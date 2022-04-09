@@ -1,0 +1,12 @@
+.heading{
+    font-size: 30px;
+    font-weight: bold;
+    color: #e9162b;
+}
+
+
+.mybox{
+    width: 200px;
+    height: 200px;
+    background-color: #e9162b;
+}
