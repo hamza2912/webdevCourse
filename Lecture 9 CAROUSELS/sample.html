@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+     <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Owl-Carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Carousels Page</title>
+  </head>
+  <body>
+    <main>
+
+      <header class="w-full lg:px-16 px-8 py-4 fixed">
+        <nav class="grid lg:grid-cols-2 grid-cols-1 items-center">
+          <div class="logo">
+            <h1 class="text-4xl font-bold">HM</h1>
+          </div>
+          <div class="menu flex lg:justify-end justify-start">
+            <div class="lg:w-1/2 w-full flex justify-between font-medium">
+              <a href="#home">Home</a>
+              <a href="#services">Services</a>
+              <a href="">About</a>
+              <a href="">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="home" class="w-full h-screen bg-blue-400 flex justify-center items-center">
+        <div class="lg:w-2/3 w-4/5 bg-white rounded-md lg:px-10 px-5 lg:py-16 py-8">
+
+          <div class="owl-carousel owl-theme product-carousel w-full">
+
+            <div class="item">
+              <div class="flex flex-col bg-gray-400">
+                <img class="w-full lg:h-64 h-48" src="images/watch.jpg" alt="">
+                <div class="text-white p-5">
+                  <h1 class="font-semibold text-2xl">Product title</h1>
+                  <p>Product description</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="flex flex-col bg-gray-400">
+                <img class="w-full lg:h-64 h-48" src="images/phone.jpg" alt="">
+                <div class="text-white p-5">
+                  <h1 class="font-semibold text-2xl">Product title</h1>
+                  <p>Product description</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="flex flex-col bg-gray-400">
+                <img class="w-full lg:h-64 h-48" src="images/apple.jpg" alt="">
+                <div class="text-white p-5">
+                  <h1 class="font-semibold text-2xl">Product title</h1>
+                  <p>Product description</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="flex flex-col bg-gray-400">
+                <img class="w-full lg:h-64 h-48" src="images/earphones.jpg" alt="">
+                <div class="text-white p-5">
+                  <h1 class="font-semibold text-2xl">Product title</h1>
+                  <p>Product description</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        
+      </section>
+
+      <section id="services" class="w-full h-screen bg-red-400">
+        
+        <div class="owl-carousel owl-theme fullscreen-carousel w-full h-screen">
+          
+          <div class="item w-full h-screen mybackground1"> 
+            <div class="lg:w-1/2 w-full h-full flex flex-col justify-center px-10 text-white">
+              <h1 class="font-semibold text-4xl">Product title</h1>
+              <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+          </div>
+
+          <div class="item w-full h-screen mybackground2"> 
+            <div class="lg:w-1/2 w-full h-full flex flex-col justify-center px-10 text-white">
+              <h1 class="font-semibold text-4xl">Product title</h1>
+              <p class="mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+          </div>
+
+        </div>
+    
+      </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+      $(function() {AOS.init();});
+    </script>
+    <script>
+
+     $('.product-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav: true,
+        dots: true,
+        pagination: true,
+        autoplay: true,
+        // autoplayTimeout:5000
+        // autoplayHoverPause:false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1000:{
+                items:3
+            }
+        }
+      })
+
+      $('.fullscreen-carousel').owlCarousel({
+        loop:true,
+        nav: false,
+        dots: false,
+        pagination: true,
+        autoplay: true,
+        items: 1,
+      })
+
+    </script>
+     
+  </body>
+</html>

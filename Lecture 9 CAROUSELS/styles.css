@@ -1,0 +1,19 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+
+.mybackground1{
+    background-image: url("images/earphones.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.mybackground2{
+    background-image: url("images/watch.jpg");
+    background-size: cover;
+    background-position: center;
+}
