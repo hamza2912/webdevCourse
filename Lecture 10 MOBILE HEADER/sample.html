@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/b13cb5204a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <main>
+
+      <header class="w-full lg:px-16 px-8 py-4 fixed">
+        <nav class="grid grid-cols-2 items-center">
+          <div class="logo">
+            <h1 class="text-4xl font-bold">HM</h1>
+          </div>
+          <div class="flex justify-end lg:hidden">
+            <i class="toggle-btn fa-solid fa-bars text-black text-xl"></i>
+            <div class="mobile-menu absolute w-full top-16 left-0 pb-4 shadow-lg hidden">
+              <div class="w-full flex flex-col items-center font-medium">
+                <a href="#home">Home</a>
+                <a class="mt-2" href="#services">Services</a>
+                <a class="mt-2" href="">About</a>
+                <a class="mt-2" href="">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="menu lg:flex hidden justify-end">
+            <div class="lg:w-1/2 w-full flex justify-between font-medium">
+              <a href="#home">Home</a>
+              <a href="#services">Services</a>
+              <a href="">About</a>
+              <a href="">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section id="home" class="w-full h-screen bg-blue-400 grid lg:grid-cols-2 grid-cols-1 lg:px-16 px-8">
+        <div class="flex lg:items-center items-end">
+          <div class="content flex flex-col">
+            <h1 class="text-4xl">Hello, I'm <span class="font-semibold text-white">Hamza</span> & <br class="lg:block hidden">I am a <span class="font-semibold text-white">Full Stack Developer</span></h1>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <img class="" src="images/freelancer.svg" alt="freelancer">
+        </div>
+      </section>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+        $('.toggle-btn').on('click', function (e) {
+          $('.mobile-menu').slideToggle();
+        }); 
+      });
+    </script>
+  </body>
+</html>
